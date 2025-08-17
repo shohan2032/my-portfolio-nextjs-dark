@@ -39,14 +39,16 @@ const AnimatedParticle = ({ delay = 0, size = "small" }) => {
         repeatDelay: Math.random() * 8 + 2,
         ease: "easeOut",
       }}
-      className={`absolute ${sizeClasses[size]} bg-primary/80 rounded-full shadow-lg shadow-primary/50`}
+      className={`absolute ${
+        sizeClasses[size as keyof typeof sizeClasses]
+      } bg-primary/80 rounded-full shadow-lg shadow-primary/50`}
     />
   );
 };
 
 // Enhanced Matrix rain effect
 const MatrixRain = () => {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState<any>([]);
 
   useEffect(() => {
     // Fix: Remove .split("") since it's already an array
@@ -68,7 +70,7 @@ const MatrixRain = () => {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {characters.map((drop) => (
+      {characters.map((drop: any) => (
         <motion.div
           key={drop.id}
           initial={{ y: -100, opacity: 0, rotateX: 0 }}
@@ -367,7 +369,7 @@ const HeroSection = () => {
 
                 <div className="space-y-6">
                   <motion.div
-                    className="flex items-center gap-4 text-xl text-primary font-mono group text-white"
+                    className="flex items-center gap-4 text-xl  font-mono group text-green-400"
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 2, duration: 0.8 }}

@@ -1,6 +1,6 @@
 "use client";
-
-import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
+import { motion, Variant } from "framer-motion";
 import Link from "next/link";
 import {
   MapPin,
@@ -123,7 +123,7 @@ const Footer = () => {
             return (
               <motion.div
                 key={info.title}
-                variants={itemVariants}
+                variants={itemVariants as Variants}
                 whileHover={{
                   y: -5,
                   scale: 1.02,
@@ -203,7 +203,7 @@ const Footer = () => {
 
           {/* Social Links Section */}
           <motion.div
-            variants={itemVariants}
+            variants={itemVariants as Variants}
             whileHover={{ y: -5, scale: 1.02 }}
             className="group"
           >

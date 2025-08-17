@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -133,7 +133,10 @@ const ResumeSection = () => {
       />
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div className="text-center mb-24" variants={itemVariants}>
+        <motion.div
+          className="text-center mb-24"
+          variants={itemVariants as Variants}
+        >
           <motion.div
             className="text-white inline-flex items-center gap-4 mb-8 px-6 py-3 rounded-full border border-primary/40 bg-slate-900/60 backdrop-blur-lg"
             whileHover={{
@@ -176,7 +179,8 @@ const ResumeSection = () => {
             whileHover={{ scale: 1.02 }}
           >
             <span className="bg-gradient-to-r from-white via-primary to-slate-300 bg-clip-text text-transparent">
-              My <span className="neon-text">Resume</span>
+              {/* My <span className="neon-text">Resume</span> */}
+              My <span>Resume</span>
             </span>
           </motion.h2>
 
@@ -232,7 +236,7 @@ const ResumeSection = () => {
 
         <motion.div className="space-y-24" variants={containerVariants}>
           {/* Enhanced Experience Section */}
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants as Variants}>
             <motion.div
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
@@ -268,7 +272,7 @@ const ResumeSection = () => {
                     type: "spring",
                     stiffness: 100,
                   }}
-                  variants={cardHoverVariants}
+                  variants={cardHoverVariants as Variants}
                   whileHover="hover"
                   className="group"
                 >
@@ -309,7 +313,7 @@ const ResumeSection = () => {
                         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8">
                           <div className="mb-6 lg:mb-0 flex-1">
                             <motion.h4
-                              className="text-3xl font-bold text-primary mb-3 group-hover:text-white transition-colors"
+                              className="text-3xl font-bold text-green-200 mb-3 group-hover:text-white transition-colors"
                               whileHover={{ x: 10, scale: 1.05 }}
                             >
                               {exp.position}
@@ -455,7 +459,7 @@ const ResumeSection = () => {
 
           {/* Enhanced Skills Section */}
           <motion.div
-            variants={itemVariants}
+            variants={itemVariants as Variants}
             className="grid grid-cols-1 lg:grid-cols-2 gap-12"
           >
             {/* Development Skills */}
@@ -581,7 +585,7 @@ const ResumeSection = () => {
 
           {/* Enhanced Education & Other Sections */}
           <motion.div
-            variants={itemVariants}
+            variants={itemVariants as Variants}
             className="grid grid-cols-1 lg:grid-cols-3 gap-8"
           >
             {/* Education */}

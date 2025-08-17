@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Trophy, Star } from "lucide-react";
@@ -136,7 +136,7 @@ const GallerySection = () => {
           {achievements.map((achievement, index) => (
             <motion.div
               key={achievement.id}
-              variants={itemVariants}
+              variants={itemVariants as Variants}
               whileHover={{ y: -10 }}
               className="group"
             >
@@ -165,7 +165,7 @@ const GallerySection = () => {
                         <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-purple-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                         <motion.div
-                          variants={imageVariants}
+                          variants={imageVariants as Variants}
                           className="relative w-full h-full"
                         >
                           <Image

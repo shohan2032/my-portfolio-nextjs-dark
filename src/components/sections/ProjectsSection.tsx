@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -133,7 +133,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              variants={cardVariants}
+              variants={cardVariants as Variants}
               whileHover={{
                 y: -15,
                 rotateY: 5,
