@@ -4,7 +4,7 @@ export const personalInfo = {
   tagline: "Practice makes a man perfect",
   description: "I was born in Noakhali but raised in Chattogram. I am pursuing my B.Sc degree in CSE at International Islamic University of Chittagong. I am an optimistic competitive Programming Problems solver.",
   profileImage: "/images/me1.jpg",
-  cvLink: "https://drive.google.com/file/d/1ZPWJpaBX5h6gZ4hhXmOrSNMiLK2tyX_o/view?usp=sharing",
+  cvLink: "https://drive.google.com/file/d/1u8NAu0dxcrsfCzblEsVS_MRq80oLFB82/view?usp=sharing",
   contact: {
     address: "Teri Bazar, Katawali(4000), Chattogram",
     phone: "01757470639",
