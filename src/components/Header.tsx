@@ -338,7 +338,7 @@ const Header = () => {
                       Menu
                     </motion.div>
 
-                    {navigationItems.map((item, index) => (
+                    {navigationItems.map((item) => (
                       <motion.div
                         key={item.name}
                         variants={{
