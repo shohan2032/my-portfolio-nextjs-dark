@@ -134,7 +134,7 @@ export const projects = [
     title: "NewsPortal using API",
     image: "/images/new-portal-api.jpg",
     description: "A web-based project developed using HTML, CSS, JSON where user can read news of many category.",
-    demoLink: "https://news-portal-qo9l.vercel.app/",
+    demoLink: "https://news-portal-qo9l.vercel.app/#categoryOfNews",
     technologies: ["HTML", "CSS", "JavaScript", "JSON"]
   },
   {
